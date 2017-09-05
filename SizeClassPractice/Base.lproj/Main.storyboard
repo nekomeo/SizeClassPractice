@@ -27,8 +27,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Regular Height" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVw-Wc-9Pc">
+                                <rect key="frame" x="130.5" y="358" width="114" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Compact Height" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BxO-4l-hbh">
-                                <rect key="frame" x="270.5" y="148" width="125.5" height="21"/>
+                                <rect key="frame" x="270.5" y="148" width="126" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -36,19 +42,42 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="eVw-Wc-9Pc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="35" id="3BE-De-EWn">
+                                <variation key="widthClass=compact" constant="35"/>
+                            </constraint>
                             <constraint firstItem="BxO-4l-hbh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-29" id="9RZ-yL-ny6"/>
                             <constraint firstItem="BxO-4l-hbh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BvP-YN-jOe"/>
                             <constraint firstItem="Tb1-Ry-rkL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DDt-6x-Ece"/>
+                            <constraint firstItem="eVw-Wc-9Pc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HiD-9P-VWh"/>
                             <constraint firstItem="Tb1-Ry-rkL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nHE-Sq-UDs"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="eVw-Wc-9Pc"/>
                                 <exclude reference="BxO-4l-hbh"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="3BE-De-EWn"/>
+                                <exclude reference="HiD-9P-VWh"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
                             <mask key="subviews">
                                 <include reference="BxO-4l-hbh"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="eVw-Wc-9Pc"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="3BE-De-EWn"/>
+                                <include reference="HiD-9P-VWh"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="HiD-9P-VWh"/>
                             </mask>
                         </variation>
                     </view>
